@@ -68,6 +68,8 @@
 
 \RequirePackage[pdftex,breaklinks,hidelinks,pdfdisplaydoctitle]{hyperref}
 
+\RequirePackage{tabularx}
+
 % == Redefine macros for PDF integration == %
 \def\title#1{%
   \gdef\@title{#1}
@@ -77,6 +79,9 @@
 \def\author#1{%
   \gdef\@author{#1}
   \hypersetup{pdfauthor={\@author}}}
+
+\def\contenttype#1{%
+  \gdef\@contenttype{#1}}
 
 %\synctex=1
 
@@ -92,7 +97,7 @@
 
 % == Define header and footer == %
 \setlength{\headheight}{50pt}
-\lhead{Résumé}
+\lhead{ \@contenttype }
 \rhead{ \@author }
 
 \cfoot{\bfseries\thepage / \pageref{LastPage}}
@@ -106,9 +111,21 @@
 \parindent=0pt % disables indentation
 \parskip=2pt % adds vertical space between paragraphs
 
+%% == cv highligh == %%
+%% highligh elements for table headers, titles, subtitles, etc %%
+\newcommand{\cvgray}{\rowcolor[gray]{.90}}
+
 %% == cv item == %%
-%% new layout item to organize data below section, in a table like format %%
+%% new layout item to organize data below section, 2 columns, date and content %%
 \newcommand{\cvitem}[2]{\begin{minipage}[t]{0.13\textwidth}#1\end{minipage}\begin{minipage}[t]{0.87\textwidth}#2\end{minipage}\par}
+%% for short dates like, from year from "1999 - 2000" or month abreviations and year "Oct. 1910" %%
+\newcommand{\cvitemshort}[2]{\begin{minipage}[t]{0.13\textwidth}#1\end{minipage}\begin{minipage}[t]{0.87\textwidth}#2\end{minipage}\par}
+%% for longer dates, where start month year and finish month year is required %%
+\newcommand{\cvitemlong}[2]{\begin{minipage}[t]{0.23\textwidth}#1\end{minipage}\begin{minipage}[t]{0.77\textwidth}#2\end{minipage}\par}
+
+%% == cv table == %%
+%% new layout item to organize data inside sections or not, in a table like format  %%
+\newcommand{\cvtable}[3]{\begin{tabularx}{0.95\textwidth}{p{194pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
 
 %% == spacing == %%
 \newcommand{\cvspace}{\vspace{.2cm}}

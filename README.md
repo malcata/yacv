@@ -12,4 +12,4 @@ To include this just add the following or similar to your résumé tex file.
 
 Roadmap
 ---------
-Hope to add support for two columns and landscape support down the road.
+Hope to add support for two columns and landscape down the road.
