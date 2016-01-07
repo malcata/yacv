@@ -9,6 +9,11 @@ To include this just add the following or similar to your résumé tex file.
 %% my document class for CVs %%<BR>
 \documentclass[en]{yacv}
 
+Dependencies
+---------
+lastpage
+enumitem
+
 
 Roadmap
 ---------
