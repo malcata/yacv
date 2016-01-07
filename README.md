@@ -11,9 +11,20 @@ To include this just add the following or similar to your résumé tex file.
 
 Dependencies
 ---------
+ifthen
+verbatim
+inputenc
+fontenc
+babel
+color
+xcolor
+geometry
 lastpage
-enumitem
-
+fancyhdr
+setspace
+graphicx
+hyperref
+tabularx
 
 Roadmap
 ---------
