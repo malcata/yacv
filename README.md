@@ -28,4 +28,6 @@ tabularx
 
 Roadmap
 ---------
-Hope to add support for two columns and landscape down the road.
+* Add support for two columns
+* Add landscape support
+* Add docker image to offer a seamless CV creation
