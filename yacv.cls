@@ -107,6 +107,12 @@
 \renewcommand*{\familydefault}{\sfdefault}
 \fontseries{l}
 
+% == Define sections == %
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}
+
 % == Paragraph settings == %%
 \parindent=0pt % disables indentation
 \parskip=2pt % adds vertical space between paragraphs
