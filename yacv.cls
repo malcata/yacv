@@ -97,8 +97,8 @@
 
 % == Define header and footer == %
 \setlength{\headheight}{50pt}
-\lhead{ \@contenttype }
-\rhead{ \@author }
+\lhead{ \@author }
+\rhead{ \@contenttype }
 
 \cfoot{\bfseries\thepage / \pageref{LastPage}}
 %%%
