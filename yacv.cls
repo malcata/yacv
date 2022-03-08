@@ -117,21 +117,23 @@
 \parindent=0pt % disables indentation
 \parskip=2pt % adds vertical space between paragraphs
 
-%% == cv highligh == %%
-%% highligh elements for table headers, titles, subtitles, etc %%
+%% == cv highlight == %%
+%% highlight elements for table headers, titles, subtitles, etc %%
 \newcommand{\cvgray}{\rowcolor[gray]{.90}}
 
 %% == cv item == %%
 %% new layout item to organize data below section, 2 columns, date and content %%
 \newcommand{\cvitem}[2]{\begin{minipage}[t]{0.13\textwidth}#1\end{minipage}\begin{minipage}[t]{0.87\textwidth}#2\end{minipage}\par}
 %% for short dates like, from year from "1999 - 2000" or month abreviations and year "Oct. 1910" %%
-\newcommand{\cvitemshort}[2]{\begin{minipage}[t]{0.13\textwidth}#1\end{minipage}\begin{minipage}[t]{0.87\textwidth}#2\end{minipage}\par}
+\newcommand{\cvitemshort}[2]{\begin{minipage}[t]{0.11\textwidth}#1\end{minipage}\begin{minipage}[t]{0.89\textwidth}#2\end{minipage}\par}
 %% for longer dates, where start month year and finish month year is required %%
 \newcommand{\cvitemlong}[2]{\begin{minipage}[t]{0.23\textwidth}#1\end{minipage}\begin{minipage}[t]{0.77\textwidth}#2\end{minipage}\par}
 
 %% == cv table == %%
 %% new layout item to organize data inside sections or not, in a table like format  %%
-\newcommand{\cvtable}[3]{\begin{tabularx}{0.95\textwidth}{p{194pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
+\newcommand{\cvtable}[3]{\begin{tabularx}{.98\textwidth}{p{200pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
+\newcommand{\cvtablellong}[3]{\begin{tabularx}{1\textwidth}{p{265pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
+
 
 %% == spacing == %%
 \newcommand{\cvspace}{\vspace{.2cm}}
