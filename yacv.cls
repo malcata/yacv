@@ -131,7 +131,7 @@
 
 %% == cv table == %%
 %% new layout item to organize data inside sections or not, in a table like format  %%
-\newcommand{\cvtable}[3]{\begin{tabularx}{1\textwidth}{p{185pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
+\newcommand{\cvtable}[3]{\begin{tabularx}{1\textwidth}{p{120pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
 \newcommand{\cvtablellong}[3]{\begin{tabularx}{1\textwidth}{p{265pt}X}\hline \cvgray #1 & #2\\\hline#3\hline\end{tabularx}}
 
 
